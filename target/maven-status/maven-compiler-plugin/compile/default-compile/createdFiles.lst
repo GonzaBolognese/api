@@ -1,0 +1,16 @@
+com\nocountry\api\persistence\repository\CategoryRepository.class
+com\nocountry\api\service\CategoryService.class
+com\nocountry\api\persistence\entity\Product$ProductStatus.class
+com\nocountry\api\persistence\repository\ProductRepository.class
+com\nocountry\api\dto\SaveCategory.class
+com\nocountry\api\controller\ProductController.class
+com\nocountry\api\persistence\entity\Product.class
+com\nocountry\api\service\impl\ProductServiceImp.class
+com\nocountry\api\ApiApplication.class
+com\nocountry\api\service\ProductService.class
+com\nocountry\api\persistence\entity\Category$CategoryType.class
+com\nocountry\api\exception\ObjectNotFoundException.class
+com\nocountry\api\service\impl\CategoryServiceImpl.class
+com\nocountry\api\persistence\entity\Category.class
+com\nocountry\api\controller\CategoryController.class
+com\nocountry\api\dto\SaveProduct.class
