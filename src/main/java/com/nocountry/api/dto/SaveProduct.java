@@ -1,6 +1,5 @@
 package com.nocountry.api.dto;
 
-import com.nocountry.api.persistence.entity.Category.CategoryType;
 import jakarta.validation.constraints.DecimalMin;
 import jakarta.validation.constraints.Min;
 import jakarta.validation.constraints.NotBlank;
@@ -14,20 +13,20 @@ import java.util.Set;
 @Getter @Setter
 public class SaveProduct implements Serializable {
 
-    @NotBlank
+    @NotBlank (message = "El nombre no puede estar vacio")
     private String name;
 
     private String description;
 
-    @DecimalMin(value = "0.01")
+    @DecimalMin(value = "0.01", message = "El precio debe ser mayor a 0")
     private BigDecimal price;
 
     private String image;
 
-    @Min(value = 0)
+    @Min(value = 0 , message = "El stock debe ser mayor a 0")
     private int stock;
 
-    @Min(value = 1)
+    @Min(value = 1, message = "El tiempo debe ser mayor a 1")
     private int time;
 
     private Set<String> categories;

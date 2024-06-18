@@ -18,6 +18,6 @@ public class Category {
     private CategoryType name;
 
     public enum CategoryType {
-        DESAYUNO, ENTRADA, PLATO_PRINCIPAL, POSTRE, ADICIONAL, BEBIDA
+        DESAYUNOS, COMIDA, CENA, POSTRE, ADICIONAL, BEBIDA
     }
 }

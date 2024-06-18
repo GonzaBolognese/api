@@ -4,11 +4,9 @@ import jakarta.persistence.*;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.Setter;
-import org.hibernate.annotations.UuidGenerator;
 
 import java.math.BigDecimal;
 import java.util.Set;
-import java.util.UUID;
 
 
 @Entity
@@ -27,6 +25,7 @@ public class Product {
 
     private BigDecimal price;
 
+    @Column(columnDefinition = "TEXT")
     private String image;
 
     private int ranking;

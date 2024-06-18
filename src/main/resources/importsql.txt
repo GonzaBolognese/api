@@ -1,0 +1,74 @@
+/* Se debe crear una base de datos en mysql llamada nocountry_api y dentro de este proyecto en archivo application.properties se deben settear las credenciales correspondientes*/
+
+use nocountry_api;
+
+INSERT INTO categories(name) VALUES ('DESAYUNOs');
+INSERT INTO categories(name) VALUES ('COMIDA');
+INSERT INTO categories(name) VALUES ('CENA');
+INSERT INTO categories(name) VALUES ('POSTRE');
+INSERT INTO categories(name) VALUES ('ADICIONAL');
+INSERT INTO categories(name) VALUES ('BEBIDA');
+
+
+-- Categoría 2
+INSERT INTO products (name, description, price, image, ranking, stock, time, status)
+VALUES ('Ceviche de Pescado', 'Ceviche delicioso hecho con pescado fresco', 12000.00, 'https://www.elespectador.com/resizer/tyGJPN_YmWpagQFeXq_YYOxAKjY=/arc-anglerfish-arc2-prod-elespectador/public/2AVD5Z6Y2ZFWHETPQGCPLMNK4A.jpg', 5, 10, 20, 'ENABLED');
+
+INSERT INTO products (name, description, price, image, ranking, stock, time, status)
+VALUES ('Anticuchos', 'Brochetas de corazón de res a la parrilla', 8000.00, 'https://mandolina.co/wp-content/uploads/2024/02/anticuchos-brasilenos-1080x550-1.jpg', 4, 15, 15, 'ENABLED');
+
+INSERT INTO products (name, description, price, image, ranking, stock, time, status)
+VALUES ('Papa a la Huancaína', 'Papas cubiertas con una salsa cremosa y picante', 6000.00, 'https://imgmedia.buenazo.pe/652x359/buenazo/original/2020/09/25/5f6eaf8e2810e95b5c5da50c.webp', 4, 20, 10, 'ENABLED');
+
+INSERT INTO products (name, description, price, image, ranking, stock, time, status)
+VALUES ('Causa Limeña', 'Plato de papa en capas con pollo', 10000.00, 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQdcbuHrsdVcBbVMZMZQV9yJnCSTTfIpxmsFw&s', 5, 8, 25, 'ENABLED');
+
+INSERT INTO products (name, description, price, image, ranking, stock, time, status)
+VALUES ('Tiradito', 'Pescado en rodajas con salsa picante', 7000.00, 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSclUrs2QLctPKG41Wm06SqtUt0WET9AAsduw&s', 4, 12, 18, 'ENABLED');
+
+-- Productos de la categoría de Acompañamientos
+INSERT INTO products (name, description, price, image, ranking, stock, time, status)
+VALUES ('Papas Fritas', 'Papas fritas crujientes', 3000.00, 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRIrQvXLT62wCyLq6QyRhHBv1sGTczyElJ4Cw&s', 3, 18, 8, 'ENABLED');
+INSERT INTO products (name, description, price, image, ranking, stock, time, status)
+VALUES ('Arroz blanco', 'Arroz blanco al vapor', 3000.00, 'arroz_blanco.jpghttps://d1kxxrc2vqy8oa.cloudfront.net/wp-content/uploads/2019/05/27120103/RFB-1505-5-arrozblanco.jpg', 3, 30, 12, 'ENABLED');
+
+INSERT INTO products (name, description, price, image, ranking, stock, time, status)
+VALUES ('Ensalada', 'Ensalada fresca mixta', 3000.00, 'https://t1.uc.ltmcdn.com/es/posts/1/4/4/como_hacer_una_ensalada_con_naranja_52441_600_square.jpg', 3, 18, 8, 'ENABLED');
+
+-- Productos de la categoría de Postres
+INSERT INTO products (name, description, price, image, ranking, stock, time, status)
+VALUES ('Tres Leches', 'Pastel húmedo con tres tipos de leche', 7000.00, 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSutBwmJeqidFm1emW5EjuAp4arPanUurMn1w&s', 5, 15, 15, 'ENABLED');
+
+INSERT INTO products (name, description, price, image, ranking, stock, time, status)
+VALUES ('Mazamorra Morada', 'Pudín de maíz morado', 7000.00, 'https://storage.googleapis.com/fitia-api-bucket/media/images/recipe_images/1001188.jpg', 4, 20, 20, 'ENABLED');
+
+INSERT INTO products (name, description, price, image, ranking, stock, time, status)
+VALUES ('Arroz con Leche', 'Arroz con leche cremoso', 9000.00, 'https://assets.tmecosys.com/image/upload/t_web767x639/img/recipe/ras/Assets/A4F055C9-D340-4F2A-9015-6A2659851E84/Derivates/5b9a24d1-7748-4bfe-ba63-fb3e5f722db0.jpg', 5, 25, 18, 'ENABLED');
+
+-- Productos de la categoría de Bebidas
+INSERT INTO products (name, description, price, image, ranking, stock, time, status)
+VALUES ('Chicha Morada', 'Bebida de maíz morado', 3000.00, 'https://www.thespruceeats.com/thmb/yCuLhIlhmAOen6ECm5snuVQNR1Q=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/chicha-morada-4156888-hero-01-f3cb01b1112f4f44a4627de614a8f7b9.jpg', 4, 30, 5, 'ENABLED');
+
+INSERT INTO products (name, description, price, image, ranking, stock, time, status)
+VALUES ('Pisco Sour', 'Coctel clásico peruano', 5000.00, 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRYR4TPuUg_H9vkehn9gOFt2YJ2Pc3j9vQ_FQ&s', 5, 10, 8, 'ENABLED');
+
+INSERT INTO products (name, description, price, image, ranking, stock, time, status)
+VALUES ('Inka Cola', 'Gaseosa popular peruana', 4000.00, 'https://d31npzejelj8v1.cloudfront.net/media/catalog/product/i/n/inca_kola_original.jpg', 3, 40, 2, 'ENABLED');
+
+INSERT INTO product_category (category_id, product_id) VALUES (2, 1);
+INSERT INTO product_category (category_id, product_id) VALUES (2, 2);
+INSERT INTO product_category (category_id, product_id) VALUES (2, 3);
+INSERT INTO product_category (category_id, product_id) VALUES (2, 4);
+INSERT INTO product_category (category_id, product_id) VALUES (2, 5);
+
+INSERT INTO product_category (category_id, product_id) VALUES (5, 6);
+INSERT INTO product_category (category_id, product_id) VALUES (5, 7);
+INSERT INTO product_category (category_id, product_id) VALUES (5, 8);
+
+INSERT INTO product_category (category_id, product_id) VALUES (4, 9);
+INSERT INTO product_category (category_id, product_id) VALUES (4, 10);
+INSERT INTO product_category (category_id, product_id) VALUES (4, 11);
+
+INSERT INTO product_category (category_id, product_id) VALUES (6, 12);
+INSERT INTO product_category (category_id, product_id) VALUES (6, 13);
+INSERT INTO product_category (category_id, product_id) VALUES (6, 14);
